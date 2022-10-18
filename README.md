@@ -39,3 +39,6 @@ conda env create --name swat_env --file=environment.yml
   year      = {2022},
 }
 ```
+
+[arnold1998large]: https://pubag.nal.usda.gov/download/75/pdf
+[arnold2012swat]: https://swat.tamu.edu/media/99051/azdezasp.pdf
