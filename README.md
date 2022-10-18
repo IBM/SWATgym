@@ -24,6 +24,8 @@ conda env create --name swat_env --file=environment.yml
 
 3. Activate the environment: `conda activate swat_env`
 
+4. Run an example with a Random policy agent: `python main.py`
+
 ## References
 
 [Arnold et al., 1998. *Large area hydrologic modeling and assessment part I: model development*. Journal of the American Water Resources Association, 34 (1), 73–89.][arnold1998large]
