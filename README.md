@@ -16,15 +16,17 @@ All dependencies are included in the [environment.yml](https://github.com/IBM/SW
 ```
 git clone https://github.com/IBM/SWATgym
 ```
-2. After cloning, create a virtual environment e.g., using Conda: ```
+
+2. After cloning, create a virtual environment e.g., using Conda: 
+```
 conda env create --name swat_env --file=environment.yml
 ```
+
 3. Activate the environment: `conda activate swat_env`
 
 ## References
 
-[Arnold et al., 1998. *Large area hydrologic modeling and
-assessment part I: model development*. Journal of the American Water Resources Association, 34 (1), 73–89.][arnold1998large]
+[Arnold et al., 1998. *Large area hydrologic modeling and assessment part I: model development*. Journal of the American Water Resources Association, 34 (1), 73–89.][arnold1998large]
 
 [Arnold et al., 2012. *SWAT: model use, calibration, and validation*. Transactions of the ASABE, 55 (4), 1491–1508.][arnold2012swat]
 
