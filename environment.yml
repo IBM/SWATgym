@@ -48,4 +48,4 @@ dependencies:
     - sqlalchemy==1.4.42
     - traitlets-pcse==5.0.0.dev0
     - urllib3==1.26.12
-prefix: /opt/miniconda3/envs/swatenv
+prefix: /opt/miniconda3/envs/swat_env
