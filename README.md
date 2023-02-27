@@ -35,10 +35,11 @@ conda env create --name swat_env --file=environment.yml
 ## Citing this work
 
 ```
-@article{madondo2022swatgym,
-  author    = {Malvern Madondo and Muneeza Azmat and Kelsey DiPietro and Raya Horesh and Michael Jacobs and Arun Bawa and Raghavan Srinivasan and Fearghal O’Donncha},
-  title     = {A SWAT-based Reinforcement Learning Framework for Crop Management},
-  year      = {2022},
+@article{madondo2023swat,
+  title={A SWAT-based Reinforcement Learning Framework for Crop Management},
+  author={Madondo, Malvern and Azmat, Muneeza and Dipietro, Kelsey and Horesh, Raya and Jacobs, Michael and Bawa, Arun and Srinivasan, Raghavan and O'Donncha, Fearghal},
+  journal={arXiv preprint arXiv:2302.04988},
+  year={2023}
 }
 ```
 
