@@ -69,10 +69,10 @@ class SWATEnv(gym.Env):
     ```
     with x being the permissible upper limit for the action space. A seed may also be set for experimentation, along with specific location information.
     """
-
+    
     metadata = {'render.modes': ['human']}
 
-    def __init__(self, max_action=60.0, seed=None, latitude = 31.0565725, longitude = -97.34756354, elevation = 206):
+    def __init__(self, max_action=60.0, seed=None, latitude = 31.0565725, longitude = -97.3497522, elevation = 206):
         # gym params
         
         self.action_space = spaces.Box(low=0, high=max_action, shape=(2,), dtype=np.float64)
@@ -216,18 +216,27 @@ class SWATEnv(gym.Env):
         """
         pass
 
-    def init_weather(self):
+    def init_weather(self, path=None):
         self.current_date = self.start_date
         location = (self.latitude, self.longitude)
-        self.weatherdataprovider = pcse.db.NASAPowerWeatherDataProvider(*location) # PCSE weather data provider
-        weather = self._get_weather_day(self.weatherdataprovider, self.start_date - datetime.timedelta(days=1))
-        self.avg_temp = weather[0]
-        self.solar_rad = weather[1]/1e6 # convert to MegaJoules
-        self.avg_vapor_pressure = weather[2]
-        self.precip = weather[3]*10 # convert cm to mm
-        self.ref_et = weather[4]*10
-        self.total_ref_et = 0
-        self.soil_evap = weather[5]*10
+
+        if path is not None:
+            self.avg_temp = 0
+            self.solar_rad = 0
+            self.avg_vapor_pressure = 0
+            self.precip = 0
+            self.ref_et = 0
+            self.soil_evap = 0
+        else:
+            self.weatherdataprovider = pcse.db.NASAPowerWeatherDataProvider(*location) # PCSE weather data provider
+            weather = self._get_weather_day(self.weatherdataprovider, self.start_date - datetime.timedelta(days=1))
+            self.avg_temp = weather[0]
+            self.solar_rad = weather[1]/1e6 # convert to MegaJoules
+            self.avg_vapor_pressure = weather[2]
+            self.precip = weather[3]*10 # convert cm to mm
+            self.ref_et = weather[4]*10
+            self.total_ref_et = 0
+            self.soil_evap = weather[5]*10
 
     def init_crop(self):
         # temperature params
