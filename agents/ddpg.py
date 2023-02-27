@@ -11,6 +11,11 @@ import torch.nn.functional as F
 import torch.optim as optim
 import numpy as np
 
+import sys
+from os.path import dirname, join, abspath
+sys.path.insert(0, abspath(join(dirname(__file__), '..')))
+from envs.swat_gym import SWATEnv
+
 # ddpg hyperparameters
 lr_mu        = 0.001
 lr_q         = 0.01
