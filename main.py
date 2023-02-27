@@ -263,7 +263,7 @@ if __name__=="__main__":
                 sys.exit(0)
 
             file_name = f"{algorithm}_{seed}"
-            savePath = f'./experiments/analysis_{sim_time}/{file_name}'
+            savePath = f'./experiments/exp_{sim_time}/{file_name}'
             if not os.path.exists(savePath):
                 os.makedirs(savePath)
 
