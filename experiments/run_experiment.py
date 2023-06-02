@@ -279,7 +279,7 @@ if __name__=="__main__":
 
             # Initialize policy, replayer buffer, and noise
             if algorithm=='Random':
-                agent = StandardAgent(env.start_date)
+                agent = RandomAgent(env.start_date)
                 rewards, evals, df = baseline_evals(env, algorithm, agent, seed)
             elif algorithm=='Standard':
                 agent = StandardAgent(env.start_date)
